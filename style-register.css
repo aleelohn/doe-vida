@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --color1: #7b2aad;
+    --color2: #6035aa;
+    --color3: #ce93d8; 
+    --color4: #CAB3FF;
+    --color5: #f5eaff;
+    --color6: #756966;
+    --color7: #403937;
+    --color8: #7e57c2;
+    --color9: #dbccfd;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--color1);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color5);
+}
+
+::selection {
+    background-color: var(--color4);
+}
+
+main {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.register-left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.register-left .register-image{
+    width: 40rem;
+}
+
+.register-right {
+    width: 70%;
+    height: fit-content;
+    background-color: var(--color5);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .212);
+    position: relative;
+}
+
+.form-header{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    color: var(--color7);
+}
+
+.logo {
+    position: absolute;
+    top: -4.5rem;
+    width: 20rem;
+    height: 9rem;
+}
+
+button {
+    padding: 1.2rem 3.2rem;
+    border: 0;
+    background-color: var(--color8);
+    border-radius: 0.5rem;
+    color: var(--color5);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+ion-icon {
+    font-size: 2.5rem;
+}
+
+button:hover {
+    background-color: var(--color2);
+    transition: 0.7s ease-in-out;
+    transform: scale(1.01);
+}
+
+form {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+label {
+    color: var(--color7);
+}
+
+input {
+    width: 90%;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    color: var(--color7);
+    font-size: 1.4rem;
+    box-shadow: 0 0.5rem 2rem var(--color6);
+    outline: none;
+}
+
+input:focus {
+    outline: auto;
+}
+
+input::placeholder {
+    color: var(--color7);
+}
+
+select {
+    width: 90%;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background: #fff;
+    color: var(--color7);
+    font-size: 1.4rem;
+    box-shadow: 0 0.5rem 2rem var(--color6);
+    outline: none;
+}
+
+select:focus {
+    outline: auto;
+}
+
+
+.registerButton {
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+    grid-column: span 2;
+}
+
+input[type=submit] {
+    padding: 1.2rem 3.2rem;
+    border: 0;
+    background-color: var(--color8);
+    border-radius: 0.5rem;
+    color: var(--color5);
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+input[type=submit]:hover {
+    background-color: var(--color2);
+    transition: 0.7s ease-in-out;
+    transform: scale(1.01);
+}
+
+
+@media (max-width: 1100px){
+    main {
+        width: 85%;
+    }
+
+    .register-left {
+        display: none;
+    }
+   
+    .register-right {
+        width: 100%;
+    }
+
+    form {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.3rem;
+    }
+}

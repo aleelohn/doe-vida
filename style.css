@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --color1: #7b2aad;
+    --color2: #6035aa;
+    --color3: #ce93d8; 
+    --color4: #CAB3FF;
+    --color5: #f5eaff;
+    --color6: #756966;
+    --color7: #403937;
+    --color8: #7e57c2;
+    --color9: #dbccfd;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Inter", sans-serif;
+    background-color: var(--color1);
+}
+
+a {
+    text-decoration: none;
+}
+
+::selection {
+    background-color: var(--color4);
+}
+
+#app {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    min-height: 100vh;
+}
+
+.inner {
+    height: 100%;
+    background-color: var(--color5);
+    border-top-left-radius: 3.2rem;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    padding-top: 0.8rem;
+}
+
+nav {
+    padding: 3.2rem 2.7rem 0 3.5rem;
+}
+
+.logo {
+    width: 24rem;
+    height: 11rem;
+}
+
+ul {
+    margin-top: 5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+li a {
+    color: var(--color4);
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+a.active,
+a:hover {
+    color: #FFF;
+    font-weight: 700;
+}
+
+a ion-icon {
+    font-size: 3rem;
+}
+
+.top {
+    width: 100rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 2.4rem;
+}
+
+.top img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+h1 {
+    text-align: center;
+    gap: 1.2rem;
+    font-size: 4rem;
+    color: var(--color7);
+}
+
+section {
+    margin-top: 3.2rem;
+    padding: 0 2.4rem;
+    display: flex;
+    gap: 1.2rem;
+}
+
+button {
+    padding: 1.2rem 3.2rem;
+    border: 0;
+    background-color: var(--color8);
+    border-radius: 0.5rem;
+    color: var(--color5);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+button span {
+    text-shadow: 0rem 0.4rem 1.6rem rgba(22, 22, 22, 0.1);
+    font-size: 2rem;
+}
+
+button ion-icon {
+    font-size: 3rem;
+}
+
+button:hover {
+    background-color: var(--color2);
+    transition: 0.7s ease-in-out;
+    transform: scale(1.05);
+}
+
+.requests {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.requests h3 {
+    font-size: 2rem;
+    color: var(--color7);
+}
+
+.cards {
+    max-width: 102rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+    width: 27rem;
+    padding: 1.2em;
+    background-color: #FFF;
+    box-shadow: 0rem 0.4rem 1.6rem var(--color4);
+    border-radius: 0.8rem;
+    line-height: 130%;
+}
+
+.card > img {
+    display: block;
+    height: 15rem;
+    border-radius: 0.8rem;
+}
+
+.bloodtype-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bloodtype-date ion-icon {
+    font-size: 1.9rem;
+    color: #ff2c2c;
+}
+
+.bloodtype-date > div {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.7rem;
+    background-color: var(--color9);
+    border-radius: 0.7rem;
+    font-weight: bold;
+}
+
+.card .date {
+    color: var(--color7);
+}
+
+.card h3 {
+    font-size: 2rem;
+    color: var(--color7);
+}
+
+.card p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--color7);
+}
+
+.card address {
+    font-size: 1.2rem;
+}
+
+.card button {
+    width: max-content;
+    margin: auto;
+    font-size: 2rem;
+}
+
+.ask {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    opacity: 0.90;
+}
+
+@media screen and (max-width: 1250px) {
+    .top {
+        max-width: 48rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #app {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner {
+        border-top-left-radius: 0rem;
+    }
+    
+    .logo {
+        margin: auto;
+    }
+
+    nav a {
+        display: flex;
+    }
+
+    ul {
+        margin-top: 3rem;
+        gap: 3rem;
+        margin-bottom: 3rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top {
+        max-width: 48rem;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0%;
+    }
+}

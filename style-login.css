@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    --color1: #7b2aad;
+    --color2: #6035aa;
+    --color3: #ce93d8; 
+    --color4: #CAB3FF;
+    --color5: #f5eaff;
+    --color6: #756966;
+    --color7: #403937;
+    --color8: #7e57c2;
+    --color9: #dbccfd;
+}
+
+a {
+    text-decoration: none;
+}
+
+::selection {
+    background-color: var(--color4);
+}
+
+section {
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-left {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 25rem;
+    height: 11rem;
+    margin: 1rem 0 3rem 0;
+}
+
+.login-left > h1 {
+    font-size: 4.5rem;
+    color: var(--color3);
+    text-align: center;
+    font-weight: 800;
+}
+
+.login-doctors {
+    width: 35rem;
+}
+
+.login-right {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.login-card {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+    padding: 3rem 3.5rem;
+    background-color: var(--color3) ;
+    border-radius: 2.5rem;
+    box-shadow: 0 1rem 4rem var(--color2);
+    margin-bottom: 1rem;
+}
+
+.login-card > h1 {
+    color: var(--color2);
+    font-weight: 700;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0 1rem 0;
+}
+
+form > input {
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background: var(--color5);
+    color: var(--color7);
+    font-size: 1.6rem;
+    box-shadow: 0 0.5rem 2rem var(--color2);
+    outline: none;
+}
+
+input:focus {
+    outline: auto;
+}
+
+form > label {
+    color: var(--color2);
+    font-weight: 700;
+}
+
+form > input::placeholder {
+    color: var(--color6);
+}
+
+.forgetpassword {
+    margin-top: 1rem;
+    color: var(--color2);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.forgetpassword:hover {
+    color: var(--color8);
+    transform: scale(1.05);
+}
+
+/* ForgetPassword  */
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: var(--color5);
+    border-radius: 2rem;
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+.btn-close, .modal-body, .form-control, .btn-primary {
+    font-size: 2rem;
+}
+
+.form-control {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: var(--color5);
+    box-shadow: 0 0.5rem 2rem var(--color6);
+}
+
+.btn-primary {
+    padding: 1rem 3rem;
+    margin: auto;
+    border: none;
+    border-radius: 0.7rem;
+    font-weight: 500;
+    color: var(--color5);
+    background: var(--color8);
+    box-shadow: 0 1.5rem 4rem -1rem #7e57c2;
+}
+
+.btn-primary:hover {
+    background-color: var(--color2);
+    color: #f0ffff;
+    transition: 0.7s ease-in-out;
+}
+
+.btn-primary:focus {
+    background-color: var(--color8);
+    outline: auto;
+}
+
+/* Login */
+
+.button-login {
+    width: 100%;
+    padding: 1.7rem 0;
+    text-align: center;
+    margin: auto;
+    border: none;
+    border-radius: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    color: var(--color5);
+    background: var(--color8);
+    box-shadow: 0 1.5rem 4rem -1rem var(--color8);
+}
+
+.button-login:hover {
+    background-color: var(--color2);
+    color: var(--color5);
+    transition: 0.7s ease-in-out;
+    transform: scale(1.01);
+}
+
+.register {
+    color: var(--color2);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.register:hover {
+    color: var(--color8);
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 950px) {
+
+    .login-card {
+        width: 85%;
+    }
+
+    .login-left > h1 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    section {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .login-left > h1 {
+        display: none;
+    }
+
+    .login-left, .login-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-doctors {
+        display: none;
+    }
+
+    .login-card {
+        width: 90%;
+    }
+}
