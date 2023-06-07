@@ -3,7 +3,7 @@
 <br>
 
 <div align="center">
-    <img src="assets/logo_doevida_fundobranco.png" width="380px"/>
+    <img src="./assets/logoDoeVidaFundoBranco.png" width="380px"/>
 </div>
 
 <br>
