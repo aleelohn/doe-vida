@@ -1,3 +1,7 @@
+<?php 
+    include "conexao.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,7 +29,7 @@
                 <button>Entrar <ion-icon name="log-in-outline"></ion-icon></button>
             </div>
             <hr>
-            <form action="index.php" method="POST">
+            <form action="functions.php" method="POST">
                 <div>
                     <label for="name">Nome</label>
                     <br>

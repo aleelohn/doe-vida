@@ -28,11 +28,11 @@
         <div class="login-right">
             <div class="login-card">
                 <h1>LOGIN</h1>
-                <form action="">
+                <form action="functions.php" method="POST">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" placeholder="exemplo@hotmail.com">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="email" name="email" placeholder="exemplo@gmail.com">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" placeholder="Senha">
                     <a type="button" class="forgetpassword" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         Esqueceu sua senha?
@@ -61,8 +61,8 @@
                             </div>
                         </div>
                     </div>
-                    <a href="home.html" class="button-login">Login</a>
-                    <a href="register.html" class="register">Cadastre-se</a>
+                    <input type="submit" value="Login" name="logar" class="button-login">
+                    <a href="register.php" class="register">Cadastre-se</a>
                 </form>
             </div>
         </div>
