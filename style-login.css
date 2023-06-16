@@ -123,6 +123,12 @@ form > input::placeholder {
     color: var(--color6);
 }
 
+.invalidLogin {
+    font-weight: bold;
+    color: rgb(255, 48, 48);
+    text-align: center;
+}
+
 .forgetpassword {
     margin-top: 1rem;
     color: var(--color2);

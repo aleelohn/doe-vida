@@ -33,6 +33,10 @@
                     <input type="email" name="email" placeholder="exemplo@gmail.com">
                     <label for="password">Senha</label>
                     <input type="password" name="password" placeholder="Senha">
+                    <?php if (isset($_GET['invalidLogin']) == 'true') {
+                     echo "<span class='invalidLogin'>Login inválido, tente novamente.</span>";
+                    }
+                    ?>
                     <a type="button" class="forgetpassword" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         Esqueceu sua senha?

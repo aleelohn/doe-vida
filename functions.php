@@ -1,12 +1,6 @@
 <?php 
     include "conexao.php";
 
-    //inicio da sessao
-    session_start();
-    if (!isset($_SESSION['login'])) {
-        header('location:login.php');
-    }
-
     //logout
     if(isset($_GET['logout'])) {
         session_destroy();
@@ -41,7 +35,7 @@
 
         $cadastra->execute();
 
-        echo "<script>window.location.replace('login.php');</script>";
+        header('location:login.php');
     }
 
     //login
@@ -57,7 +51,7 @@
         $ver_login->execute();
 
         if ($ver_login->rowCount()==0) {
-            echo "Email ou Senha inválido";
+            header('location:login.php?invalidLogin=true');
         } else {
             session_start();
             $row = $ver_login->fetch();
