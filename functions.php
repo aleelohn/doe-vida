@@ -1,6 +1,12 @@
 <?php 
     include "conexao.php";
 
+    //inicio da sessao de login
+    session_start();
+    if (!isset($_SESSION['login'])) {
+        header('location:login.php');
+    }
+
     //logout
     if(isset($_GET['logout'])) {
         session_destroy();
@@ -16,7 +22,7 @@
         $CPF = $_POST['CPF'];
         $gender = $_POST['gender'];
         $city = $_POST['city'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
         $confirmPassword = $_POST['confirmPassword'];
         $bloodType = $_POST['bloodType'];
 
@@ -41,7 +47,7 @@
     //login
     if (isset($_POST['logar'])) {
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
 
         $ver_login = $conexao->prepare('SELECT * FROM `cadastro` WHERE `dsEmail` = :pEmail AND `dsSenha` = :pSenha;');
 

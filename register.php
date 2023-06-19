@@ -72,12 +72,12 @@
                 <div>
                     <label for="password">Senha</label>
                     <br>
-                    <input id="password" type="password" name="password" placeholder="Digite sua senha" maxlength="30" required>
+                    <input id="password" type="password" name="password" placeholder="Digite sua senha" maxlength="50" required>
                 </div>
                 <div>
                     <label for="confirmPassword">Confirme sua senha</label>
                     <br>
-                    <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirme sua senha" maxlength="30" required>
+                    <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirme sua senha" maxlength="50" required>
                 </div>
                 <div>
                     <label for="bloodType">Tipo Sanguíneo</label>

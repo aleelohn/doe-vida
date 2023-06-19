@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href='functions.php?logout'>
+                    <a href="functions.php?logout">
                         <ion-icon name="log-out-outline"></ion-icon>
                         Logout
                     </a>
