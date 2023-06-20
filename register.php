@@ -1,7 +1,3 @@
-<?php 
-    include "conexao.php";
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,14 +15,14 @@
 
 <body>
     <main>
-        <div class="register-left">
-            <img src="assets/register.svg" class="register-image">
+        <div class="registerLeft">
+            <img src="assets/register.svg" class="registerImage">
         </div>
-        <div class="register-right">
-            <div class="form-header">
+        <div class="registerRight">
+            <div class="formHeader">
                 <h1>Cadastre-se</h1>
                 <img src="assets/logoDoeVidaFundoBranco.png" class="logo" alt="logo">
-                <button>Entrar <ion-icon name="log-in-outline"></ion-icon></button>
+                <a href="login.php" class="loginButton">Entrar <ion-icon name="log-in-outline"></ion-icon></a>
             </div>
             <hr>
             <form action="functions.php" method="POST">
@@ -75,11 +71,6 @@
                     <input id="password" type="password" name="password" placeholder="Digite sua senha" maxlength="50" required>
                 </div>
                 <div>
-                    <label for="confirmPassword">Confirme sua senha</label>
-                    <br>
-                    <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirme sua senha" maxlength="50" required>
-                </div>
-                <div>
                     <label for="bloodType">Tipo Sanguíneo</label>
                     <br>
                         <select id="bloodType" name="bloodType" required>
@@ -95,7 +86,7 @@
                         </select>
                 </div>
                 <div class="registerButton">
-                    <input id="register" type="submit" name="cadastra" value="Cadastrar">
+                    <input id="register" type="submit" name="register" value="Cadastrar">
                 </div>
             </form>
         </div>

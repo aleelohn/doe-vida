@@ -8,7 +8,7 @@
 
 <br>
 
-<p align="center"> Este é o Projeto Integrador em andamente do Tecnólogo Análise e Desenvolvimento de Sistemas do Centro Universitário UniOpet. O Doe Vida tem como objetivo ser a ponte entre o doador de sangue e o paciente que está precisando de sangue, buscando facilitar esse processo que é muito importante. Dessa forma é um projeto que tem um âmbito voltando para a sociedade como um todo.</p>
+<p align="center"> Este é o Projeto Integrador em andamento do curso Tecnólogo de Análise e Desenvolvimento de Sistemas do Centro Universitário UniOpet. O Doe Vida tem como objetivo ser a ponte entre o doador de sangue e o paciente que está precisando de sangue, buscando facilitar esse processo que é muito importante. Dessa forma é um projeto que tem um âmbito voltado para a sociedade como um todo.</p>
 
 <br>
 
@@ -31,9 +31,3 @@ As tecnologias utilizadas nesse projeto foram as seguintes:
 - Javascript
 - Git e Github
 - Bootstrap
-
-## 💻 Projeto
-
-O link para acessar o software do Doe Vida de forma online é este:
-
-- [Projeto Online](https://aleelohn.github.io/doe-vida/)

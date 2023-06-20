@@ -1,5 +1,5 @@
 <?php 
-    include "conexao.php";
+    include "connection.php";
 
     //inicio da sessao de login
     session_start();
@@ -14,7 +14,7 @@
     }
 
     //cadastro
-    if(isset($_POST['cadastra'])) {
+    if(isset($_POST['register'])) {
         $name = $_POST['name'];
         $email = $_POST['email'];
         $phoneNumber = $_POST['phoneNumber'];
@@ -23,44 +23,42 @@
         $gender = $_POST['gender'];
         $city = $_POST['city'];
         $password = md5($_POST['password']);
-        $confirmPassword = $_POST['confirmPassword'];
         $bloodType = $_POST['bloodType'];
 
-        $cadastra = $conexao->prepare('INSERT INTO `cadastro` (`idCadastro`, `nmPessoa`, `dsEmail`, `nrTelefone`, `dtNascimento`, `nrCPF`, `dsGenero`, `nmCidade`, `dsSenha`, `dsConfirmarSenha`, `dsTipoSangue`) VALUES (NULL, :pNome, :pEmail, :pTelefone, :pDataNascimento, :pCPF, :pGenero, :pCidade, :pSenha, :pConfirmarSenha, :pTipoSangue);');
+        $register = $connection->prepare('INSERT INTO `cadastro` (`idCadastro`, `nmPessoa`, `dsEmail`, `nrTelefone`, `dtNascimento`, `nrCPF`, `dsGenero`, `nmCidade`, `dsSenha`, `dsTipoSangue`) VALUES (NULL, :pName, :pEmail, :pPhoneNumber, :pDate, :pCPF, :pGender, :pCity, :pPassword, :pBloodType);');
 
-        $cadastra->bindValue(':pNome', $name);
-        $cadastra->bindValue(':pEmail', $email);
-        $cadastra->bindValue(':pTelefone', $phoneNumber);
-        $cadastra->bindValue(':pDataNascimento', $date);
-        $cadastra->bindValue(':pCPF', $CPF);
-        $cadastra->bindValue(':pGenero', $gender);
-        $cadastra->bindValue(':pCidade', $city);
-        $cadastra->bindValue(':pSenha', $password);
-        $cadastra->bindValue(':pConfirmarSenha', $confirmPassword);
-        $cadastra->bindValue(':pTipoSangue', $bloodType);
+        $register->bindValue(':pName', $name);
+        $register->bindValue(':pEmail', $email);
+        $register->bindValue(':pPhoneNumber', $phoneNumber);
+        $register->bindValue(':pDate', $date);
+        $register->bindValue(':pCPF', $CPF);
+        $register->bindValue(':pGender', $gender);
+        $register->bindValue(':pCity', $city);
+        $register->bindValue(':pPassword', $password);
+        $register->bindValue(':pBloodType', $bloodType);
 
-        $cadastra->execute();
+        $register->execute();
 
         header('location:login.php');
     }
 
     //login
-    if (isset($_POST['logar'])) {
+    if (isset($_POST['login'])) {
         $email = $_POST['email'];
         $password = md5($_POST['password']);
 
-        $ver_login = $conexao->prepare('SELECT * FROM `cadastro` WHERE `dsEmail` = :pEmail AND `dsSenha` = :pSenha;');
+        $login = $connection->prepare('SELECT * FROM `cadastro` WHERE `dsEmail` = :pEmail AND `dsSenha` = :pPassword;');
 
-        $ver_login->bindValue(':pEmail', $email);
-        $ver_login->bindValue(':pSenha', $password);
+        $login->bindValue(':pEmail', $email);
+        $login->bindValue(':pPassword', $password);
 
-        $ver_login->execute();
+        $login->execute();
 
-        if ($ver_login->rowCount()==0) {
+        if ($login->rowCount()==0) {
             header('location:login.php?invalidLogin=true');
         } else {
             session_start();
-            $row = $ver_login->fetch();
+            $row = $login->fetch();
             $idLogin = $row['idCadastro'];
             $_SESSION['login']=$idLogin;
             header('location:index.php');

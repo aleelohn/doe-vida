@@ -38,7 +38,7 @@ section {
     align-items: center;
 }
 
-.login-left {
+.loginLeft {
     width: 50vw;
     display: flex;
     justify-content: center;
@@ -52,18 +52,18 @@ section {
     margin: 1rem 0 3rem 0;
 }
 
-.login-left > h1 {
+.loginLeft > h1 {
     font-size: 4.5rem;
     color: var(--color3);
     text-align: center;
     font-weight: 800;
 }
 
-.login-doctors {
+.loginDoctors {
     width: 35rem;
 }
 
-.login-right {
+.loginRight {
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -71,7 +71,7 @@ section {
     align-items: center;  
 }
 
-.login-card {
+.loginCard {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -84,7 +84,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.login-card > h1 {
+.loginCard > h1 {
     color: var(--color2);
     font-weight: 700;
 }
@@ -129,19 +129,19 @@ form > input::placeholder {
     text-align: center;
 }
 
-.forgetpassword {
+.forgetPassword {
     margin-top: 1rem;
     color: var(--color2);
     font-size: 1.5rem;
     text-align: center;
 }
 
-.forgetpassword:hover {
+.forgetPassword:hover {
     color: var(--color8);
     transform: scale(1.05);
 }
 
-/* ForgetPassword  */
+/* ForgetPassword Modal */
 
 .modal-content {
     display: flex;
@@ -191,7 +191,7 @@ form > input::placeholder {
 
 /* Login */
 
-.button-login {
+.buttonLogin {
     width: 100%;
     padding: 1.7rem 0;
     text-align: center;
@@ -206,7 +206,7 @@ form > input::placeholder {
     box-shadow: 0 1.5rem 4rem -1rem var(--color8);
 }
 
-.button-login:hover {
+.buttonLogin:hover {
     background-color: var(--color2);
     color: var(--color5);
     transition: 0.7s ease-in-out;
@@ -226,11 +226,11 @@ form > input::placeholder {
 
 @media only screen and (max-width: 950px) {
 
-    .login-card {
+    .loginCard {
         width: 85%;
     }
 
-    .login-left > h1 {
+    .loginLeft > h1 {
         display: none;
     }
 }
@@ -242,20 +242,20 @@ form > input::placeholder {
         height: 100vh;
     }
 
-    .login-left > h1 {
+    .loginLeft > h1 {
         display: none;
     }
 
-    .login-left, .login-right {
+    .loginLeft, .loginRight {
         width: 100%;
         height: auto;
     }
 
-    .login-doctors {
+    .loginDoctors {
         display: none;
     }
 
-    .login-card {
+    .loginCard {
         width: 90%;
     }
 }

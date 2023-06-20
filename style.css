@@ -181,18 +181,18 @@ button:hover {
     border-radius: 0.8rem;
 }
 
-.bloodtype-date {
+.bloodTypeDate {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.bloodtype-date ion-icon {
+.bloodTypeDate ion-icon {
     font-size: 1.9rem;
     color: #ff2c2c;
 }
 
-.bloodtype-date > div {
+.bloodTypeDate > div {
     display: flex;
     align-items: center;
     padding: 0.3rem 0.7rem;

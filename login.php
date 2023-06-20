@@ -20,13 +20,13 @@
 
 <body>
     <section>
-        <div class="login-left">
+        <div class="loginLeft">
             <img src="assets/logoDoeVidaFundoBranco.png" class="logo"/>
             <h1>Faça login e doe vida!</h1>
-            <img src="assets/doctor.svg" class="login-doctors" alt="doutores">
+            <img src="assets/doctor.svg" class="loginDoctors" alt="doutores">
         </div>
-        <div class="login-right">
-            <div class="login-card">
+        <div class="loginRight">
+            <div class="loginCard">
                 <h1>LOGIN</h1>
                 <form action="functions.php" method="POST">
                     <label for="email">E-mail</label>
@@ -37,7 +37,7 @@
                      echo "<span class='invalidLogin'>Login inválido, tente novamente.</span>";
                     }
                     ?>
-                    <a type="button" class="forgetpassword" data-bs-toggle="modal"
+                    <a type="button" class="forgetPassword" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         Esqueceu sua senha?
                     </a>
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" value="Login" name="logar" class="button-login">
+                    <input type="submit" value="Login" name="login" class="buttonLogin">
                     <a href="register.php" class="register">Cadastre-se</a>
                 </form>
             </div>

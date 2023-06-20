@@ -65,7 +65,7 @@
         <main>
             <div class="inner">
                 <section class="top">
-                    <a href="#"><img src="https://github.com/aleelohn.png" alt="profile-picture"></a>
+                    <a href="#"><img src="https://github.com/aleelohn.png" alt="Foto de Perfil"></a>
                     <h1>Doações</h1>
                     <button>
                         <ion-icon name="filter-outline"></ion-icon>
@@ -76,7 +76,7 @@
                     <div class="cards">
                         <div class="card">
                             <img src="assets/hemocentro1.jpg" alt="">
-                            <div class="bloodtype-date">
+                            <div class="bloodTypeDate">
                                 <div>
                                     <ion-icon name="water"></ion-icon>
                                     <small>O+</small>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="card">
                             <img src="assets/hemocentro2.jpg" alt="">
-                            <div class="bloodtype-date">
+                            <div class="bloodTypeDate">
                                 <div>
                                     <ion-icon name="water"></ion-icon>
                                     <small>A+</small>
@@ -106,7 +106,7 @@
                         </div>
                         <div class="card">
                             <img src="assets/hemocentro3.jpg" alt="">
-                            <div class="bloodtype-date">
+                            <div class="bloodTypeDate">
                                 <div>
                                     <ion-icon name="water"></ion-icon>
                                     <small>B-</small>
