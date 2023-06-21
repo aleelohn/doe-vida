@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style-register.css" />
+    <link rel="stylesheet" type="text/css" href="styleRegister.css" />
     <link rel="shortcut icon" href="assets/logoDoeVidaIcone.ico" type="image/x-icon">
     <title>Cadastre-se</title>
 </head>
@@ -27,7 +27,7 @@
             <hr>
             <form action="functions.php" method="POST">
                 <div>
-                    <label for="name">Nome</label>
+                    <label for="name">Nome Completo</label>
                     <br>
                     <input id="name" type="text" name="name" placeholder="Digite seu nome completo" maxlength="80" required>
                 </div>
@@ -39,7 +39,7 @@
                 <div>
                     <label for="phoneNumber">Celular</label>
                     <br>
-                    <input id="phoneNumber" type="tel" name="phoneNumber" placeholder="(xx) xxxxx-xxxx" maxlength="14" required>
+                    <input id="phoneNumber" type="text" name="phoneNumber" placeholder="Celular (apenas números)" minlength="8" maxlength="11" required onkeypress="return /\d/.test(event.key)">
                 </div>
                 <div>
                     <label for="date">Data de Nascimento</label>
@@ -49,15 +49,15 @@
                 <div>
                     <label for="CPF">CPF</label>
                     <br>
-                    <input id="CPF" type="text" name="CPF" placeholder="xxx.xxx.xxx-xx" maxlength="14" required>
+                    <input id="CPF" type="text" name="CPF" placeholder="CPF (apenas números)" minlength="11" maxlength="11" required onkeypress="return /\d/.test(event.key)">
                 </div>
                 <div>
                     <label for="gender">Sexo</label>
                     <br>
                     <select id="gender" name="gender" required>
-                        <option selected>Qual seu sexo?</option>
-                        <option value="1">Masculino</option>
-                        <option value="2">Feminino</option>
+                        <option value="" disabled selected>Qual seu sexo?</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
                     </select>
                 </div>
                 <div>
@@ -74,15 +74,15 @@
                     <label for="bloodType">Tipo Sanguíneo</label>
                     <br>
                         <select id="bloodType" name="bloodType" required>
-                            <option selected>Escolha seu tipo sanguíneo</option>
-                            <option value="1">A+</option>
-                            <option value="2">A-</option>
-                            <option value="3">B+</option>
-                            <option value="4">B-</option>
-                            <option value="5">O+</option>
-                            <option value="6">O-</option>
-                            <option value="7">AB+</option>
-                            <option value="8">AB-</option>
+                            <option value="" disabled selected>Qual seu tipo sanguíneo?</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
                         </select>
                 </div>
                 <div class="registerButton">
