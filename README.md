@@ -28,6 +28,6 @@ As tecnologias utilizadas nesse projeto foram as seguintes:
 
 - HTML e CSS
 - PHP
-- Javascript
+- JavaScript
 - Git e Github
 - Bootstrap
