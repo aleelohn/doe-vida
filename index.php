@@ -22,10 +22,10 @@
 <body>
     <div id="app">
         <nav>
-            <a href="#"><img class="logo" src="assets/logoDoeVidaFundoBranco.png" alt="logo"></a>
+            <a href="index.php"><img class="logo" src="assets/logoDoeVidaFundoBranco.png" alt="logo"></a>
             <ul>
                 <li>
-                    <a href="#" class="active">
+                    <a href="index.php" class="active">
                         <ion-icon name="home"></ion-icon>
                         Início
                     </a>
@@ -43,7 +43,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="rules.php">
                         <ion-icon name="document-text"></ion-icon>
                         Orientações
                     </a>
@@ -65,7 +65,6 @@
         <main>
             <div class="inner">
                 <section class="top">
-                    <a href="#"><img src="https://github.com/aleelohn.png" alt="Foto de Perfil"></a>
                     <h1>Doações</h1>
                     <button>
                         <ion-icon name="filter-outline"></ion-icon>
